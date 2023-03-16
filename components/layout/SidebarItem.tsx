@@ -8,7 +8,7 @@ interface SidebarItemProps {
   onClick?: () => void;
 }
 
-const SidebarItem = () => {
+const SidebarItem: React.FC<SidebarItemProps> = ({label, href, icon, onClick}) => {
   return (
     <div>SidebarItem</div>
   )
