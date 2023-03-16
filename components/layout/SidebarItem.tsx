@@ -27,7 +27,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({label, href, icon: Icon, onCli
           lg:hidden
       '
       >
-        <Icon></Icon>
+        <Icon size={28} color="white"/>
       </div>
     </div>
   )
