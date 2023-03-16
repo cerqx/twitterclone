@@ -8,9 +8,28 @@ interface SidebarItemProps {
   onClick?: () => void;
 }
 
-const SidebarItem: React.FC<SidebarItemProps> = ({label, href, icon, onClick}) => {
+const SidebarItem: React.FC<SidebarItemProps> = ({label, href, icon: Icon, onClick}) => {
   return (
-    <div>SidebarItem</div>
+    <div className='flex flex-row items-center'>
+      <div 
+        className='
+          relative
+          rounded-full
+          h-14
+          w-14
+          flex
+          items-center
+          justify-center
+          p-4
+          hover:bg-slate-300
+          hover:bg-opacity-10
+          cursor-pointer
+          lg:hidden
+      '
+      >
+        <Icon></Icon>
+      </div>
+    </div>
   )
 }
 
