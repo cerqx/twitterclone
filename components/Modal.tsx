@@ -117,7 +117,7 @@ const Modal: React.FC<ModalProps> = ({
                 <AiOutlineClose size={20}/>
               </button>
             </div>
-            
+
             {/* Body */}
             <div className='relative p-10 flex-auto'>
               {body}
@@ -133,6 +133,7 @@ const Modal: React.FC<ModalProps> = ({
                 large 
                 onClick={handleSubmit}
               />
+              {footer}
             </div>
           </div>
         </div>
