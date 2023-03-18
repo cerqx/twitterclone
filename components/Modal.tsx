@@ -102,7 +102,7 @@ const Modal: React.FC<ModalProps> = ({
             >
               <h3 className='text-3xl font-semibold text-white'>{title}</h3>
               <button>
-                <AiOutlineClose />
+                <AiOutlineClose size={24}/>
               </button>
             </div>
           </div>
