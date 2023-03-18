@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react'
+import { AiOutlineClose } from 'react-icons/ai'
 
 interface ModalProps {
   isOpen: boolean;
@@ -100,6 +101,9 @@ const Modal: React.FC<ModalProps> = ({
               '
             >
               <h3 className='text-3xl font-semibold text-white'>{title}</h3>
+              <button>
+                <AiOutlineClose />
+              </button>
             </div>
           </div>
         </div>
