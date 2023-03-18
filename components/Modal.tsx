@@ -22,7 +22,7 @@ const Modal: React.FC<ModalProps> = ({
   actionLabel,
   disabled
 }) => {
-  
+
   const handleClose = useCallback(() => {
     if(disabled) {
       return;
@@ -115,6 +115,10 @@ const Modal: React.FC<ModalProps> = ({
               >
                 <AiOutlineClose size={20}/>
               </button>
+            </div>
+            {/* Body */}
+            <div className='relative p-10 flex-auto'>
+              {body}
             </div>
           </div>
         </div>
