@@ -7,13 +7,15 @@ const RegisterModal = () => {
   const registerModal = useRegisterModal();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = useCallback(async () => {
     try {
       setIsLoading(true);
 
-      //TODO ADD LOG IN
+      //TODO ADD REGISTER AND LOG IN
 
       registerModal.onClose();
     } catch(err) {
@@ -33,6 +35,20 @@ const RegisterModal = () => {
       />
 
       <Input 
+        placeholder='Name'
+        value={name}
+        onChange={(event) => setName(event.target.value)}
+        disabled={isLoading}
+      />
+
+      <Input 
+        placeholder='Username'
+        value={username}
+        onChange={(event) => setUsername(event.target.value)}
+        disabled={isLoading}
+      />
+
+      <Input 
         placeholder='Password'
         value={password}
         onChange={(event) => setPassword(event.target.value)}
@@ -43,7 +59,7 @@ const RegisterModal = () => {
 
   return (
     <Modal 
-      title="Login"
+      title="Create an account"
       disabled={isLoading}
       isOpen={registerModal.isOpen}
       onClose={registerModal.onClose}
