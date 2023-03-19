@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { InputHTMLAttributes, ReactElement } from 'react'
 
-const Input = () => {
+interface InputProps {
+  placeholder?: string;
+  value?: string;
+  type?: string;
+  disabled?: boolean;
+  onChange: (event:  React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const Input: React.FC<InputProps> = () => {
   return (
     <div>Input</div>
   )
