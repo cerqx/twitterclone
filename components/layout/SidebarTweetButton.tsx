@@ -12,7 +12,7 @@ const SidebarTweetButton = () => {
   }, [loginModal])
 
   return (
-    <div onClick={() => router.push('/')}>
+    <div onClick={onClick}>
       <div 
         className='
           mt-6
