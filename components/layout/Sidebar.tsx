@@ -5,8 +5,10 @@ import {FaUser} from 'react-icons/fa'
 import SidebarItem from './SidebarItem'
 import SidebarLogo from './SidebarLogo'
 import SidebarTweetButton from './SidebarTweetButton'
+import useCurrentUser from '@/hooks/useCurrentUser'
 
 const Sidebar = () => {
+  const {data: currentUser} = useCurrentUser();
   const items = [
     {
       label: 'Home',
