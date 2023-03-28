@@ -9,6 +9,7 @@ import useCurrentUser from '@/hooks/useCurrentUser'
 
 const Sidebar = () => {
   const {data: currentUser} = useCurrentUser();
+
   const items = [
     {
       label: 'Home',
@@ -36,7 +37,9 @@ const Sidebar = () => {
             <SidebarItem key={item.href} href={item.href} label={item.label} icon={item.icon}/>
           ))}
 
-          <SidebarItem onClick={() => {}} icon={BiLogOut} label="Logout" href=''/>
+          {currentUser && (
+            <SidebarItem onClick={() => {}} icon={BiLogOut} label="Logout" href=''/>
+          )}
           <SidebarTweetButton />
         </div>
       </div>
