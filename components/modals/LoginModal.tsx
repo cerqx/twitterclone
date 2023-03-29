@@ -37,7 +37,7 @@ const LoginModal = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [loginModal, email, password])
+  }, [loginModal, email, password]);
 
   const bodyContent = (
     <div className='flex flex-col gap-4'>
@@ -56,7 +56,7 @@ const LoginModal = () => {
         disabled={isLoading}
       />
     </div>
-  )
+  );
 
   const footerContent = (
     <div className='text-neutral-400 text-center mt-4'>
@@ -64,7 +64,7 @@ const LoginModal = () => {
         <span onClick={onToggle} className='text-white cursor-pointer hover:underline'> Create an account</span>
       </p>
     </div>
-  )
+  );
 
   return (
     <Modal 
